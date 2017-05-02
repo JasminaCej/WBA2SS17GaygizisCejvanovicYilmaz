@@ -1,0 +1,19 @@
+{
+  "name": "wba2ss17gaygiziscejvanovicyilmaz",
+  "version": "0.0.1",
+  "description": "Ein Projekt",
+  "main": "staedte.json",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JasminaCej/WBA2SS17GaygizisCejvanovicYilmaz.git"
+  },
+  "author": "Cejvanovic",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/JasminaCej/WBA2SS17GaygizisCejvanovicYilmaz/issues"
+  },
+  "homepage": "https://github.com/JasminaCej/WBA2SS17GaygizisCejvanovicYilmaz#readme"
+}
