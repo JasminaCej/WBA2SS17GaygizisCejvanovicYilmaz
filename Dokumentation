@@ -1,0 +1,8 @@
+WBA 2
+Name des WebApps : Cocktail Catering
+Thema des WebApps: Die mobile Anwendung ist auf die Catering-Planung spezialisiert. Im Falle einer Bestellung für eine Veranstaltung soll die App automatisiert berechnen, welche Zutaten in welchen Mengen benötigt werden. Anbei werden noch weitere Funktionalitäten angeboten:
+1-	Cocktail und Zutaten erfassen: Hierbei wird ein bestimmtes Cocktail erfasst und die dazugehörigen Zutaten angezeigt. Diese sind 2 separate Funktionen, da wir einmal eine Cocktail Tabelle haben und eine Zutaten Tabelle, jedoch wird es beim GUI als eine Funktion angezeigt.
+2-	Zutaten Hinzufügen: Hierbei können User weitere Zutaten der Zutaten Liste hinzufügen.
+3-	Event erfassen: Ziel dieser Funktion ist es ein Event und die dazugehörigen Informationen zu erfassen.
+4-	Bestellungen erfassen: Durch diese Funktion werden die Bestellungen für ein Event erfasst.
+5-	Einkaufsliste anzeigen: Dementsprechend wird die gewünschte Einkaufsliste angezeigt
