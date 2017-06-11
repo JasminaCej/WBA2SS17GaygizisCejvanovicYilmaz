@@ -6,7 +6,12 @@ fs.readFile('staedte.json', function(err,data){
     console.log("Datei nicht gefunden");
   }else{
     var dateiString = JSON.parse(data.toString());
-    fs.writeFile('staedte.json', JSON.stringify(dateiString), function(err){
+
+    dateiString.cities.sort(function(a, b){
+      return b.population-a.population});
+
+
+    fs.writeFile('staedte_sortiert.json', JSON.stringify(dateiString), function(err){
       dateiString.cities.forEach(function(cities){
         console.log(chalk.red('Name: ' + cities.name));
         console.log(chalk.green('Country: ' + cities.country));
