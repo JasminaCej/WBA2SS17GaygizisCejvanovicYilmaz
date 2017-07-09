@@ -1,5 +1,7 @@
 'use strict';
 
+var ObjectId = require('mongodb').ObjectID;
+
 exports.register = function(app) {
 
     function getCollection(db) {
@@ -21,7 +23,7 @@ exports.register = function(app) {
 
     // GET ID ALL
     app.get('/shoppinglist/:id', function(req, res) {
-        var collection = getCollection(req.db);
+
         var id = req.param("id");
         var contentType = req.header("Content-Type");
         if(id.length != 24) {
@@ -31,7 +33,8 @@ exports.register = function(app) {
         } else if(contentType == "application/xml") {
             res.sendStatus(406)
         }else{
-            collection.find({"_id":req.param("id")}, {}, function (e,docs) {
+            var collection = getCollection(req.db);
+            collection.find({_id:ObjectId(id)}, {}, function (e,docs) {
                 if(docs && docs[0]) {
                     res.json(docs[0]);
                 }else{

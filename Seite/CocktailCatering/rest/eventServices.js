@@ -1,5 +1,7 @@
 'use strict';
 
+var ObjectId = require('mongodb').ObjectID;
+
 exports.register = function(app) {
 
     function getCollection(db) {
@@ -33,7 +35,7 @@ exports.register = function(app) {
             res.sendStatus(406)
         } else {
             var collection = getCollection(req.db);
-            collection.find({"_id":id}, {}, function (e,docs) {
+            collection.find({_id:ObjectId(id)}, {}, function (e,docs) {
                 if(docs.length > 0) {
                     res.json(docs[0]);
                 } else {
@@ -65,9 +67,9 @@ exports.register = function(app) {
             res.sendStatus(403);        // Forbidden
         }else {
             var collection = getCollection(req.db);
-            collection.find({"_id": req.body._id}, {} ,function (e,docs) {
+            collection.find({_id:ObjectId(id)}, {} ,function (e,docs) {
                 if(docs.length > 0){
-                    collection.update({"_id":req.param("id")}, req.body);
+                    collection.update({_id:ObjectId(id)}, req.body);
                     res.send();
                 }else{
                     res.sendStatus(404); // Not found
@@ -85,9 +87,9 @@ exports.register = function(app) {
             res.sendStatus(403);        // Forbidden
         }else{
             var collection = getCollection(req.db);
-            collection.find({"_id": req.body._id}, {} ,function (e,docs) {
+            collection.find({_id: ObjectId(id)}, {} ,function (e,docs) {
                 if(docs.length > 0){
-                    collection.remove({"_id":req.param("id")});
+                    collection.remove({_id:ObjectId(id)});
                     res.send();
                 }else{
                     res.sendStatus(404); // Not found

@@ -5,7 +5,7 @@ var fs = require("fs");
 
 var mongo = require('mongodb');
 var monk = require('monk');
-var db = monk('localhost:27017/CocktailCatering');
+var db = monk('mongodb://emin:wba2@ds153422.mlab.com:53422/cocktailcateringstudy');
 
 var dummyServices = require('./rest/dummyServices');
 var eventServices = require('./rest/eventServices');
