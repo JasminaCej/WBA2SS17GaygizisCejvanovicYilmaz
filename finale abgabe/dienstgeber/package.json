@@ -1,0 +1,23 @@
+{
+  "name": "dienstgeber",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node $NODE_DEBUG_OPTION app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.3",
+    "express": "~4.15.2",
+    "faye": "^1.2.4",
+    "http": "0.0.0",
+    "jade": "~1.11.0",
+    "mongodb": "^2.2.29",
+    "monk": "^6.0.1",
+    "morgan": "~1.8.1",
+    "q": "^1.5.0",
+    "rest-request": "^1.0.12",
+    "serve-favicon": "~2.4.2"
+  }
+}

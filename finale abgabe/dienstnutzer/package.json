@@ -1,0 +1,17 @@
+{
+  "name": "dienstnutzer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node $NODE_DEBUG_OPTION app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "faye": "^1.2.4",
+    "q": "^1.5.0",
+    "rest-request": "^1.0.12"
+  }
+}
